@@ -25,18 +25,18 @@
             <div class="panel panel-primary">
 
                 <div class="panel-heading">
-                    <h1 class="panel-title">My Recipes!</h1>
+                    <h1 class="panel-title" th:text="#{list.heading}">My Recipes!</h1>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive" th:if="${not #lists.isEmpty(recipes)}">
                         <table class="table table-hover ">
                             <thead class="thead-inverse">
                             <tr>
-                                <th>ID</th>
-                                <th>Description</th>
-                                <th>View</th>
-                                <th>Update</th>
-                                <th>Delete</th>
+                                <th th:text="#{list.id}">ID</th>
+                                <th th:text="#{list.description}">Description</th>
+                                <th th:text="#{list.view}">View</th>
+                                <th th:text="#{list.update}">Update</th>
+                                <th th:text="#{list.delete}">Delete</th>
                             </tr>
                             </thead>
                             <tr th:remove="all">
